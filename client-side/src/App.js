@@ -7,6 +7,7 @@ import Cart from './Cart'
 import Login from './Login'
 import Signup from './Signup'
 import ForgotPassword from './ForgotPassword'
+import UserDetail from './UserDetail'
 import {
   BrowserRouter,
   Routes,
@@ -28,6 +29,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/user" element={<UserDetail />} />
             </Routes>
           <Footer></Footer>
         </BrowserRouter>

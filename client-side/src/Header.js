@@ -4,87 +4,87 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import { Link } from "react-router-dom";
 function Header() {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-white w-100 navigation" id="navbar">
-        <div class="container">
-            <Link class="navbar-brand font-weight-bold" to={{ pathname: "/"}}><img src="assets/images/logoPhone.png" className="logoNew" alt="logo"/></Link>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
+        <nav className="navbar navbar-expand-lg navbar-light bg-white w-100 navigation" id="navbar">
+        <div className="container">
+            <Link className="navbar-brand font-weight-bold" to={{ pathname: "/"}}><img src="assets/images/logoPhone.png" className="logoNew" alt="logo"/></Link>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
             aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse " id="main-navbar">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item active">
-                <Link class="nav-link" to={{ pathname: "/"}}>HOME</Link>
+            <div className="collapse navbar-collapse " id="main-navbar">
+            <ul className="navbar-nav mx-auto">
+                <li className="nav-item active">
+                <Link className="nav-link" to={{ pathname: "/"}}>HOME</Link>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">IPHONE</a>
+                <li className="nav-item">
+                <a className="nav-link" href="#">IPHONE</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">OPPO</a>
+                <li className="nav-item">
+                <a className="nav-link" href="#">OPPO</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">SAMSUNG</a>
+                <li className="nav-item">
+                <a className="nav-link" href="#">SAMSUNG</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">ABOUT US</a>
+                <li className="nav-item">
+                <a className="nav-link" href="#">ABOUT US</a>
                 </li>
             </ul>
             </div>
         
-            <ul class="top-menu list-inline mb-0 d-none d-lg-block" id="top-menu">
-            <li class="list-inline-item">
-                <a href="#" class="search_toggle mr-3" id="search-icon"><i class="tf-ion-android-search"></i></a>
+            <ul className="top-menu list-inline mb-0 d-none d-lg-block" id="top-menu">
+            <li className="list-inline-item">
+                <a href="#" className="search_toggle mr-3" id="search-icon"><i className="tf-ion-android-search"></i></a>
             </li>
-            <li class="dropdown cart-nav dropdown-slide list-inline-item">
-                <a href="#" class="dropdown-toggle cart-icon" data-toggle="dropdown" data-hover="dropdown">
-                <i class="tf-ion-android-cart"></i>
+            <li className="dropdown cart-nav dropdown-slide list-inline-item">
+                <a href="#" className="dropdown-toggle cart-icon" data-toggle="dropdown" data-hover="dropdown">
+                <i className="tf-ion-android-cart"></i>
                 </a>
-                <div class="dropdown-menu cart-dropdown">
+                <div className="dropdown-menu cart-dropdown">
                
-                <div class="media">
+                <div className="media">
                     <a href="/product-single">
-                    <img class="media-object img- mr-3" src="assets/images/ip02.png" alt="image" />
+                    <img className="media-object img- mr-3" src="assets/images/ip02.png" alt="image" />
                     </a>
-                    <div class="media-body">
+                    <div className="media-body">
                     <h6>Iphone 14 pro max</h6>
-                    <div class="cart-price">
+                    <div className="cart-price">
                         <span>1 x</span>
                         <span>1250.00</span>
                     </div>
                     </div>
-                    <a href="#" class="remove"><i class="tf-ion-close"></i></a>
+                    <a href="#" className="remove"><i className="tf-ion-close"></i></a>
                 </div>
               
-                <div class="media">
+                <div className="media">
                     <a href="/product-single">
-                    <img class="media-object img-fluid mr-3" src="assets/images/ip01.png" alt="image" />
+                    <img className="media-object img-fluid mr-3" src="assets/images/ip01.png" alt="image" />
                     </a>
-                    <div class="media-body">
+                    <div className="media-body">
                     <h6>Iphone 13 pro max</h6>
-                    <div class="cart-price">
+                    <div className="cart-price">
                         <span>1 x</span>
                         <span>999.00</span>
                     </div>
                     </div>
-                    <a href="#" class="remove"><i class="tf-ion-close"></i></a>
+                    <a href="#" className="remove"><i className="tf-ion-close"></i></a>
                 </div>
-                <div class="cart-summary">
-                    <span class="h6">Total</span>
-                    <span class="total-price h6">$1799.00</span>
-                    <div class="text-center cart-buttons mt-3">
-                    <a href="checkout" class="btn btn-small btn-main btn-block">Checkout</a>
+                <div className="cart-summary">
+                    <span className="h6">Total</span>
+                    <span className="total-price h6">$1799.00</span>
+                    <div className="text-center cart-buttons mt-3">
+                    <a href="checkout" className="btn btn-small btn-main btn-block">Checkout</a>
                     </div>
                 </div>
                 </div>
             </li>
-            <li class="list-inline-item">
+            <li className="list-inline-item">
 
-            <li class="nav-item dropdown dropdown-slide">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-delay="350"
+            <li className="nav-item dropdown dropdown-slide">
+                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-delay="350"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   <i class="tf-ion-ios-person mr-3"></i>
+                   <i className="tf-ion-ios-person mr-3"></i>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown5">
                     <li><Link to={{ pathname: "/login"}}>Login Page</Link></li>
                     <li><Link to={{ pathname: "/signup"}}>SignUp Page</Link></li>
                     <li><Link to={{ pathname: "/forgot-password"}}>Forgot Password</Link></li>
