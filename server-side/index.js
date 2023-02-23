@@ -55,7 +55,7 @@ index.post("/login", async(req,res)=>{
         return res.json({error: "User Not Fonud"});
     }
     if(await bcryptjs.compare(password,checkUser.password)){
-        const token = jwt.sign({username: user.username}, JWT_SELECT);
+        const token = jwt.sign({username: checkUser.username}, JWT_SELECT);
         if(res.status(201)){
             return res.json({status: "OK", data: token});
         } else{
@@ -65,12 +65,12 @@ index.post("/login", async(req,res)=>{
     res.json({status: "error" ,error: "Invalid Password"})
 });
 
-index.post("userData/", async(req,res)=>{
-    const token = {token} = req.body;
+index.post("/userData", async(req,res)=>{
+    const {token} = req.body;
     try{
         const userData = jwt.verify(token, JWT_SELECT);
         console.log(userData);
-        const username = user.username;
+        const username = userData.username;
         user.findOne({username: username}).then((data)=>{
             res.send({status: "OK",data: data});
         }).catch((err)=>{

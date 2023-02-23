@@ -3,10 +3,12 @@ import React, {Component} from "react";
 export default class userDetail extends Component{
    constructor(props){
     super(props);
-    this.state = {userData: ""}
+    this.state = {
+        userData: "",
+    };
    }
    componentDidMount(){
-    fetch("http://localhost:5000/register",{
+    fetch("http://localhost:5000/userData",{
         method: "POST",
         crossDomain: true,
         headers: {
@@ -16,16 +18,19 @@ export default class userDetail extends Component{
         },
         body: JSON.stringify({
           token: window.localStorage.getItem("token"),
-        })
+        }),
       }).then((res)=>res.json())
-        .then((data)=>{console.log("Data",data);})
+        .then((data)=>{
+            console.log("Data",data);
+            this.setState({ userData: data.data});
+        })
+
    }
 
    render(){
     return(
         <div>
-            Name:<h1>{this.userData.username}</h1>
-            {/* Email:<h1>{this.userData.}</h1> */}
+            <h1>Name:{this.state.userData.username}</h1>
         </div>
     );
    }
